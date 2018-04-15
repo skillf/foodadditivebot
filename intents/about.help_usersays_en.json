@@ -1,0 +1,83 @@
+[
+  {
+    "id": "cb153c59-1e9b-48e4-a609-8328969a5d46",
+    "data": [
+      {
+        "text": "help",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1523613778
+  },
+  {
+    "id": "1650bab8-5348-403e-a595-ee234e3fe442",
+    "data": [
+      {
+        "text": "what can ",
+        "userDefined": false
+      },
+      {
+        "text": "i",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " do",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1523613778
+  },
+  {
+    "id": "04f569d7-7e2e-4c32-8bcf-b8785624737d",
+    "data": [
+      {
+        "text": "how to speak",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1523613778
+  },
+  {
+    "id": "73b91652-3c29-4519-968e-39999568e17b",
+    "data": [
+      {
+        "text": "how to use",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1523613778
+  },
+  {
+    "id": "4be4705c-6f84-4a25-b279-d2b379de954c",
+    "data": [
+      {
+        "text": "what can you do",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1523613778
+  },
+  {
+    "id": "3b669ca9-4834-43a6-93da-7044ea9fe03c",
+    "data": [
+      {
+        "text": "what do you do",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1523613778
+  }
+]

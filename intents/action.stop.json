@@ -1,0 +1,33 @@
+{
+  "id": "7d71e39a-054b-421d-a8fa-ff211806a301",
+  "name": "action.stop",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "Goodbye!",
+            "Bye!",
+            "Tata!",
+            "Alvida!"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523617045,
+  "fallbackIntent": false,
+  "events": []
+}

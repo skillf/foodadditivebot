@@ -1,0 +1,28 @@
+{
+  "id": "6791d2f6-a1dc-49ef-8d49-04286c69e0be",
+  "name": "about.help",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Food additives are used to preserve flavor, or enhance taste and appearance. Look at ingredients on the packaging and you can find things like \"E202\", or \"100(ii)\" mentioned. These are called the E number, or I.N.S. code of the additive.\n\nYou can ask me about the \"name\", \"code\", \"type\", or \"approval status\" of any such additive. You can ask like:\n- What is INS 203?\n- What is the e number of potassium sorbate?\n- Tell me the name of INS one hundred sixty a point three.\n- Give me the type of E hundred.\n- I want to know about approval status of INS 203.\n\nSay \"done / got it\" when you are done talking to me."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523617443,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,57 @@
+{
+  "id": "2968dceb-2279-41e4-ae90-ccb9a6649f81",
+  "name": "query.insstatus",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "0031f1fa-f001-4890-bdc0-2d30651adb4d",
+          "required": false,
+          "dataType": "@name-insstatus",
+          "name": "name-insstatus",
+          "value": "$name-insstatus",
+          "isList": false
+        },
+        {
+          "id": "c722d1f9-69b4-4ed6-9f2d-61cace66da5c",
+          "required": false,
+          "dataType": "@ins-tags",
+          "name": "ins-tags",
+          "value": "$ins-tags",
+          "isList": true
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "I didn\u0027t get that. Can you say it again?",
+            "I missed what you said. Say it again?",
+            "Sorry, could you say that again?",
+            "Sorry, can you say that again?",
+            "Can you say that again?",
+            "Sorry, what was that?",
+            "One more time?",
+            "What was that?",
+            "Say that again?",
+            "I didn\u0027t get that.",
+            "I missed that."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": true,
+  "lastUpdate": 1523589813,
+  "fallbackIntent": false,
+  "events": []
+}

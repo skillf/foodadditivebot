@@ -1,0 +1,59 @@
+{
+  "id": "6aec2498-c29e-4ba0-a6f2-2cd8898be4c0",
+  "name": "Default Welcome Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.welcome",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "Hi! You can ask me about the \"name\", \"code\", \"type\", or \"approval status\" of any food additive. Say \"help\", to know more, or \"done / got it\" when you are done talking to me.",
+            "Hello! You can ask me about the \"name\", \"code\", \"type\", or \"approval status\" of any food additive. Say \"help\", to know more, or \"done / got it\" when you are done talking to me.",
+            "Good day! You can ask me about the \"name\", \"code\", \"type\", or \"approval status\" of any food additive. Say \"help\", to know more, or \"done / got it\" when you are done talking to me.",
+            "Greetings! You can ask me about the \"name\", \"code\", \"type\", or \"approval status\" of any food additive. Say \"help\", to know more, or \"done / got it\" when you are done talking to me."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1523617120,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "WELCOME"
+    },
+    {
+      "name": "GOOGLE_ASSISTANT_WELCOME"
+    },
+    {
+      "name": "SLACK_WELCOME"
+    },
+    {
+      "name": "FACEBOOK_WELCOME"
+    },
+    {
+      "name": "KIK_WELCOME"
+    },
+    {
+      "name": "SKYPE_WELCOME"
+    },
+    {
+      "name": "VIBER_WELCOME"
+    },
+    {
+      "name": "TELEGRAM_WELCOME"
+    }
+  ]
+}
