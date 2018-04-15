@@ -1,0 +1,33 @@
+{
+  "name": "uppercasebot",
+  "version": "0.0.1",
+  "description": "Shouts in upper case.",
+  "scripts": {
+    "start": "node ./"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "body-parser": "^1.18.2",
+    "alexa-sdk": "^1.0.25",
+    "aws-lambda-mock-context": "^3.1.1",
+    "alexa-verifier": "^1.0.0",
+    "request": "^2.85.0",
+    "node-persist": "^2.1.0",
+    "natural": "^0.5.6",
+    "food-e": "^0.1.4",
+    "roman-numerals": "^0.3.2",
+    "food-ins": "^0.1.4"
+  },
+  "engines": {
+    "node": "9.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/my-glitch-app"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
