@@ -1,6 +1,6 @@
 {
   "name": "foodadditivebot",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Knows about additives in processed foods such as Potassium sorbate, INS 203 or E100.",
   "main": "index.js",
   "scripts": {
