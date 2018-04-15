@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const https = require('https');
 const http = require('http');
-const intents = require('./intents');
+const query = require('./query');
 const alexa = require('./alexa');
 
 const E = process.env;
@@ -13,9 +13,10 @@ const X = express();
 X.use(bodyParser.json());
 X.use(bodyParser.urlencoded({extended: true}));
 X.all('/dialogflow', (req, res) => {
+  console.log(JSON.stringify(req.body));
   var rst  = req.body.result, inp = rst.resolvedQuery;
   var int = rst.metadata.intentName, ps = rst.parameters;
-  var out = intents(int, ps);
+  var out = query(ps.key, ps.tags);
   res.json({speech: out, source: 'dialogflow'});
   console.log(`DIALOGFLOW.${int}>> "${inp}"`, ps);
   console.log(`DIALOGFLOW.${int}<< "${out}"`);

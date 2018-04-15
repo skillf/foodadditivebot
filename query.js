@@ -4,12 +4,6 @@ const foode = require('food-e');
 const message = require('./message');
 const nlp = require('./nlp');
 
-function parameter(nam, ps) {
-  if(nam.includes('.ins')) return ps['ins-tags'];
-  if(nam.includes('.e')) return ps['e-tags'];
-  return ps['any-tags'];
-};
-
 function status(sta) {
   var z = '';
   if(sta.includes('a')) z += 'Australia, New Zealand, ';
@@ -18,20 +12,21 @@ function status(sta) {
   return z.replace(/,\s*$/, '').replace(/,\s*([^,]+?)$/, ', and $1');
 };
 
-function intents(nam, ps) {
-  var inp = nlp(parameter(nam, ps).join(' '));
+function query(key, tags) {
+  if(!tags) return message('none');
+  var inp = nlp(tags.join(' '));
   inp = inp.replace(/(\s+0)?\.(\d+)/g, (m, p1, p2) => ` (${toRoman(p2)})`);
-  var i = /\.any|\.ins/.test(nam)? foodins(inp)[0]:null;
-  var e = /\.any|\.e/.test(nam)? foode(inp)[0]:null;
+  var i = /^e/.test(key)? null:foodins(inp)[0];
+  var e = /^ins/.test(key)? null:foode(inp)[0];
   if(i==null && e==null) return message('none');
   var obj = Object.assign({}, e, i);
   obj.code = `${i? 'I.N.S. '+i.code:''}${i && e? ' or ':''}${e? e.code:''}`;
   obj.status = status(obj.status);
   var sta = obj.status? 'yes':'no';
-  if(nam.endsWith('any')) return message('any_'+sta, obj);
-  if(nam.endsWith('code')) return message('code', obj);
-  if(nam.endsWith('name')) return message('name', obj);
-  if(nam.endsWith('type')) return message('type', obj);
+  if(!key) return message('any_'+sta, obj);
+  if(key.endsWith('code')) return message('code', obj);
+  if(key.endsWith('name')) return message('name', obj);
+  if(key.endsWith('type')) return message('type', obj);
   return message('status_'+sta, obj);
 };
-module.exports = intents;
+module.exports = query;
