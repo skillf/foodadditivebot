@@ -1,0 +1,55 @@
+{
+  "id": "a8767c61-de1a-4298-91f2-286d0e4950a9",
+  "name": "query",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "d5b3531f-395d-454f-a189-58fec023a94e",
+          "required": false,
+          "dataType": "@key",
+          "name": "key",
+          "value": "$key",
+          "isList": false
+        },
+        {
+          "id": "8356388a-2d01-4f57-8ced-8d617a3afae6",
+          "required": false,
+          "dataType": "@tags",
+          "name": "tags",
+          "value": "$tags",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "What is the additive?"
+            },
+            {
+              "lang": "en",
+              "value": "Which additive are you asking for?"
+            }
+          ],
+          "isList": true
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": true,
+  "lastUpdate": 1523820866,
+  "fallbackIntent": false,
+  "events": []
+}

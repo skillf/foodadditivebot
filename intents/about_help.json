@@ -1,6 +1,6 @@
 {
   "id": "6791d2f6-a1dc-49ef-8d49-04286c69e0be",
-  "name": "about.help",
+  "name": "about_help",
   "auto": true,
   "contexts": [],
   "responses": [
@@ -22,7 +22,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523617443,
+  "lastUpdate": 1523820888,
   "fallbackIntent": false,
   "events": []
 }

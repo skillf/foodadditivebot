@@ -1,0 +1,203 @@
+[
+  {
+    "value": "inscode",
+    "synonyms": [
+      "international numbering system code",
+      "international numbering system key",
+      "international numbering system number",
+      "international numbering system numeral",
+      "international numbering system integer",
+      "international numbering system figure",
+      "international numbering system symbol",
+      "ins code",
+      "ins key",
+      "ins number",
+      "ins numeral",
+      "ins integer",
+      "ins figure",
+      "ins symbol",
+      "inscode",
+      "i.n.s. code",
+      "i.n.s. key",
+      "i.n.s. number",
+      "i.n.s. numeral",
+      "i.n.s. integer",
+      "i.n.s. figure",
+      "i.n.s. symbol",
+      "i n s code",
+      "i n s key",
+      "i n s number",
+      "i n s numeral",
+      "i n s integer",
+      "i n s figure",
+      "i n s symbol"
+    ]
+  },
+  {
+    "value": "insname",
+    "synonyms": [
+      "international numbering system name",
+      "international numbering system title",
+      "international numbering system label",
+      "ins name",
+      "ins title",
+      "ins label",
+      "insname",
+      "i.n.s. name",
+      "i.n.s. title",
+      "i.n.s. label",
+      "i n s name",
+      "i n s title",
+      "i n s label"
+    ]
+  },
+  {
+    "value": "insstatus",
+    "synonyms": [
+      "international numbering system status",
+      "international numbering system approval",
+      "international numbering system acceptance",
+      "international numbering system compliance",
+      "ins status",
+      "ins approval",
+      "ins acceptance",
+      "ins compliance",
+      "insstatus",
+      "i.n.s. status",
+      "i.n.s. approval",
+      "i.n.s. acceptance",
+      "i.n.s. compliance",
+      "i n s status",
+      "i n s approval",
+      "i n s acceptance",
+      "i n s compliance"
+    ]
+  },
+  {
+    "value": "instype",
+    "synonyms": [
+      "international numbering system type",
+      "international numbering system kind",
+      "international numbering system class",
+      "international numbering system category",
+      "international numbering system group",
+      "ins type",
+      "ins kind",
+      "ins class",
+      "ins category",
+      "ins group",
+      "instype",
+      "i.n.s. type",
+      "i.n.s. kind",
+      "i.n.s. class",
+      "i.n.s. category",
+      "i.n.s. group",
+      "i n s type",
+      "i n s kind",
+      "i n s class",
+      "i n s category",
+      "i n s group"
+    ]
+  },
+  {
+    "value": "ecode",
+    "synonyms": [
+      "europe code",
+      "europe key",
+      "europe number",
+      "europe numeral",
+      "europe integer",
+      "europe figure",
+      "europe symbol",
+      "e code",
+      "e key",
+      "e number",
+      "e numeral",
+      "e integer",
+      "e figure",
+      "e symbol",
+      "ecode"
+    ]
+  },
+  {
+    "value": "ename",
+    "synonyms": [
+      "europe name",
+      "europe title",
+      "europe label",
+      "e name",
+      "e title",
+      "e label",
+      "ename"
+    ]
+  },
+  {
+    "value": "estatus",
+    "synonyms": [
+      "europe status",
+      "europe approval",
+      "europe acceptance",
+      "europe compliance",
+      "e status",
+      "e approval",
+      "e acceptance",
+      "e compliance",
+      "estatus"
+    ]
+  },
+  {
+    "value": "etype",
+    "synonyms": [
+      "europe type",
+      "europe kind",
+      "europe class",
+      "europe category",
+      "europe group",
+      "e type",
+      "e kind",
+      "e class",
+      "e category",
+      "e group",
+      "etype"
+    ]
+  },
+  {
+    "value": "code",
+    "synonyms": [
+      "code",
+      "key",
+      "number",
+      "numeral",
+      "integer",
+      "figure",
+      "symbol"
+    ]
+  },
+  {
+    "value": "name",
+    "synonyms": [
+      "name",
+      "title",
+      "label"
+    ]
+  },
+  {
+    "value": "status",
+    "synonyms": [
+      "status",
+      "approval",
+      "acceptance",
+      "compliance"
+    ]
+  },
+  {
+    "value": "type",
+    "synonyms": [
+      "type",
+      "kind",
+      "class",
+      "category",
+      "group"
+    ]
+  }
+]

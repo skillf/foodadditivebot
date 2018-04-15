@@ -1,6 +1,6 @@
 {
   "id": "7d71e39a-054b-421d-a8fa-ff211806a301",
-  "name": "action.stop",
+  "name": "action_stop",
   "auto": true,
   "contexts": [],
   "responses": [
@@ -27,7 +27,7 @@
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1523617045,
+  "lastUpdate": 1523820897,
   "fallbackIntent": false,
   "events": []
 }

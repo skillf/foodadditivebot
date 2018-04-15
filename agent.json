@@ -7,58 +7,6 @@
     "welcomeIntentSignInRequired": false,
     "startIntents": [
       {
-        "intentId": "066447d7-445f-43ea-a910-239a74af63a5",
-        "signInRequired": false
-      },
-      {
-        "intentId": "3012b76d-88c8-4f5c-b2c2-3365569c4309",
-        "signInRequired": false
-      },
-      {
-        "intentId": "b7b14ad1-7d23-48fd-8d66-af05d60e0cc5",
-        "signInRequired": false
-      },
-      {
-        "intentId": "df5144fd-64da-4618-878a-33fc6fa1a197",
-        "signInRequired": false
-      },
-      {
-        "intentId": "4e061a2e-437f-4d65-9f2d-51a735b2366d",
-        "signInRequired": false
-      },
-      {
-        "intentId": "e5964e05-1870-4c9d-85b3-14aa4398b760",
-        "signInRequired": false
-      },
-      {
-        "intentId": "959df53f-3931-4333-9fbf-87683ffe4ead",
-        "signInRequired": false
-      },
-      {
-        "intentId": "2968dceb-2279-41e4-ae90-ccb9a6649f81",
-        "signInRequired": false
-      },
-      {
-        "intentId": "f489153f-1914-4a3b-909b-94cf803383de",
-        "signInRequired": false
-      },
-      {
-        "intentId": "e704108e-da8d-4b8a-9e14-30e77439b86a",
-        "signInRequired": false
-      },
-      {
-        "intentId": "cf7b3f4a-59bc-4cbf-87ed-2a640411e556",
-        "signInRequired": false
-      },
-      {
-        "intentId": "43c51075-5272-468a-b1b9-6888ec30296f",
-        "signInRequired": false
-      },
-      {
-        "intentId": "4dd82238-da14-40d7-a46d-997a7a1cdc8f",
-        "signInRequired": false
-      },
-      {
         "intentId": "6791d2f6-a1dc-49ef-8d49-04286c69e0be",
         "signInRequired": false
       }
