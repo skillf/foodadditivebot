@@ -1,7 +1,7 @@
 {
-  "name": "uppercasebot",
-  "version": "0.0.1",
-  "description": "Shouts in upper case.",
+  "name": "foodadditivebot",
+  "version": "0.1.1",
+  "description": "Knows about additives in processed foods such as Potassium sorbate, INS 203 or E100.",
   "scripts": {
     "start": "node ./"
   },
@@ -22,12 +22,20 @@
     "node": "9.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/my-glitch-app"
+    "url": "https://github.com/skillf/foodadditivebot"
   },
   "license": "MIT",
   "keywords": [
-    "node",
-    "glitch",
-    "express"
+    "food",
+    "artificial",
+    "additive",
+    "google",
+    "assistant",
+    "app",
+    "amazon",
+    "alexa",
+    "skill",
+    "slack",
+    "bot"
   ]
 }
