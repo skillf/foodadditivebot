@@ -988,6 +988,7 @@ packages:
     engines:
       node: '>= 0.10.16'
     optional: true
+    requiresBuild: true
     resolution:
       integrity: sha1-yEsYtrokElu503NC5E3rgVFi+4M=
   /xml2js/0.4.17:
@@ -1006,7 +1007,7 @@ packages:
     resolution:
       integrity: sha1-qlijBBoGb5DqoWwvU4n/GfP0YaU=
 registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 4
+shrinkwrapMinorVersion: 5
 shrinkwrapVersion: 3
 specifiers:
   alexa-sdk: ^1.0.25

@@ -13,7 +13,7 @@ function status(sta) {
 };
 
 function query(key, tags) {
-  if(!tags) return message('none');
+  if(!tags || !tags.length) return message('none');
   var inp = nlp(tags.join(' '));
   inp = inp.replace(/(\s+0)?\.(\d+)/g, (m, p1, p2) => ` (${toRoman(p2)})`);
   var i = /^e/.test(key)? null:foodins(inp)[0];
@@ -23,10 +23,10 @@ function query(key, tags) {
   obj.code = `${i? 'I.N.S. '+i.code:''}${i && e? ' or ':''}${e? e.code:''}`;
   obj.status = status(obj.status);
   var sta = obj.status? 'yes':'no';
-  if(!key) return message('any_'+sta, obj);
   if(key.endsWith('code')) return message('code', obj);
   if(key.endsWith('name')) return message('name', obj);
   if(key.endsWith('type')) return message('type', obj);
-  return message('status_'+sta, obj);
+  if(key.endsWith('status')) return message('status_'+sta, obj);
+  return message('any_'+sta, obj);
 };
 module.exports = query;

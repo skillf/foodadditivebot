@@ -1,6 +1,29 @@
-const natural = require('natural');
-const T = require('./type');
-
+const T = {
+  TEXT: 0x00,
+  NORMAL: 0x01,
+  QUOTED: 0x02,
+  NUMBER: 0x10,
+  CARDINAL: 0x11,
+  ORDINAL: 0x12,
+  UNIT: 0x20,
+  MASS: 0x21,
+  ENTITY: 0x30,
+  TABLE: 0x31,
+  COLUMN: 0x32,
+  ROW: 0x33,
+  BRACKET: 0x40,
+  OPEN: 0x41,
+  CLOSE: 0x42,
+  OPERATOR: 0x50,
+  UNARY: 0x51,
+  BINARY: 0x52,
+  TERNARY: 0x53,
+  FUNCTION: 0x60,
+  KEYWORD: 0x70,
+  EXPRESSION: 0x80,
+  VALUE: 0x81,
+  BOOLEAN: 0x82,
+};
 const DECIMAL = new Set(['dot', 'point', 'decimal']);
 const SPECIAL = new Map([
   ['infinity', Infinity],
@@ -187,4 +210,29 @@ function number(tkns) {
   }
   return z;
 };
-module.exports = number;
+
+function token(type, value) {
+  return {type, value};
+};
+
+function tokenize(txt) {
+  var quo = null, y = '', z = [];
+  for(var c of txt) {
+    if((quo!=null && quo!=c) || /\w/.test(c)) { y += c; continue; }
+    if(y) { z.push(token(quo!=null? T.QUOTED:T.TEXT, y)); y = ''; }
+    if(/[\'\"\`]/.test(c)) quo = quo==null? c:null;
+    else if(/\S/g.test(c)) z.push(token(T.TEXT, c));
+  }
+  if(y) z.push(token(quo!=null? T.QUOTED:T.TEXT, y));
+  return z;
+};
+
+function nlp(txt) {
+  var tkns = tokenize(txt), z = '';
+  tkns.push(token(T.TEXT, ''));
+  tkns = number(tkns);
+  for(var tkn of tkns)
+    z += tkn.value+' ';
+  return z.trim();
+};
+module.exports = nlp;

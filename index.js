@@ -6,21 +6,14 @@ const https = require('https');
 const http = require('http');
 const query = require('./query');
 const alexa = require('./alexa');
+const dialogflow = require('./dialogflow');
 
 const E = process.env;
 const X = express();
 
 X.use(bodyParser.json());
 X.use(bodyParser.urlencoded({extended: true}));
-X.all('/dialogflow', (req, res) => {
-  console.log(JSON.stringify(req.body));
-  var rst  = req.body.result, inp = rst.resolvedQuery;
-  var int = rst.metadata.intentName, ps = rst.parameters;
-  var out = query(ps.key, ps.tags);
-  res.json({speech: out, source: 'dialogflow'});
-  console.log(`DIALOGFLOW.${int}>> "${inp}"`, ps);
-  console.log(`DIALOGFLOW.${int}<< "${out}"`);
-});
+X.all('/dialogflow', dialogflow);
 X.all('/alexa', (req, res) => {
   var h = req.headers;
   alexaVerifier(h.signaturecertchainurl, h.signature, JSON.stringify(req.body), (err) => {
@@ -29,6 +22,9 @@ X.all('/alexa', (req, res) => {
     alexa.handler(req.body, ctx);
     ctx.Promise.then((ans) => res.json(ans));
   });
+});
+X.all('/slack/install', (req, res) => {
+  res.redirect(`https://slack.com/oauth/authorize?client_id=${E.SLACK_CLIENT_ID}&scope=${E.SLACK_SCOPE}`);
 });
 X.use(express.static('assets', {extensions:['html']}));
 

@@ -5,20 +5,21 @@ const query = require('./query');
 const E = process.env;
 const LAUNCHED = new Set();
 
-function launch(t) {
-  LAUNCHED.add(t.event.session.sessionId);
-  return ':ask';
+function launch(txt) {
+  LAUNCHED.add(this.event.session.sessionId);
+  this.emit(':ask', txt);
 };
-function stop(t) {
-  LAUNCHED.delete(t.event.session.sessionId);
-  return ':tell';
+function stop(txt) {
+  LAUNCHED.delete(this.event.session.sessionId);
+  this.emit(':tell', txt);
 };
-function tell(t) {
-  return LAUNCHED.has(t.event.session.sessionId)? ':ask':':tell';
+function tell(txt) {
+  var e = LAUNCHED.has(this.event.session.sessionId)? ':ask':':tell';
+  this.emit(e, e===':ask'? `${txt} <break time="2s"/> ${message('more')}`:txt);
 };
 
 function name(p) {
-  if(!p.resolutions) return p.value||'';
+  if(!p.resolutions || !p.resolutions.resolutionsPerAuthority[0].values) return p.value||'';
   return p.resolutions.resolutionsPerAuthority[0].values[0].value.name;
 };
 function parameters(s) {
@@ -27,42 +28,42 @@ function parameters(s) {
 
 function LaunchRequest() {
   console.log(`ALEXA.LaunchRequest`);
-  this.emit(launch(this), message('welcome'));
+  launch.call(this, message('welcome'));
 };
 
 function DefaultFallbackIntent() {
   console.log(`ALEXA.DefaultFallbackIntent`);
-  this.emit(tell(this), message('error'));
+  tell.call(this, message('error'));
 };
 
 function HelpIntent() {
   console.log(`ALEXA.HelpIntent`);
-  this.emit(tell(this), message('help'));
+  tell.call(this, message('help'));
 };
 
 function CancelIntent() {
   console.log(`ALEXA.CancelIntent`);
-  this.emit(stop(this), message('stop'));
+  stop.call(this, message('stop'));
 };
 
 function StopIntent() {
   console.log(`ALEXA.StopIntent`);
-  this.emit(stop(this), message('stop'));
+  stop.call(this, message('stop'));
 };
 
 function SessionEndedRequest() {
   console.log(`ALEXA.SessionEndedRequest`);
-  this.emit(stop(this), message('stop'));
+  stop.call(this, message('stop'));
 };
 
 function Unhandled() {
   var int = this.event.request.intent;
-  if(!int || !int.slots) return this.emit(':tell', message('stop'));
+  if(!int || !int.slots) return tell.call(this, message('stop'));
   var nam = int.name, ps = parameters(int.slots);
-  var out = query(ps.key, [ps.tags]);
   console.log(`ALEXA.${nam}>>`, ps);
+  var out = query(ps.key||'', [ps.tags]);
   console.log(`ALEXA.${nam}<< "${out}"`);
-  this.emit(tell(this), out);
+  tell.call(this, out);
 };
 
 
@@ -76,4 +77,3 @@ exports.handler = function(e, ctx, fn) {
   alexa.registerHandlers(handlers);
   alexa.execute();
 };
-// this.event.request.intent.slots.text.value;

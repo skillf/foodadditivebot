@@ -28,6 +28,14 @@ const NONE = [
   "I don't know about ingredients.",
   "I don't think it's a food additive.",
 ];
+const MORE = [
+  "Knowledge is power, ask me more.",
+  "What else do you want to know?",
+  "Anything else?",
+  "Something else?",
+  "What's next?",
+  "What else?",
+];
 const CODE = [
   "${names} is ${code}.",
   "${names} is coded as ${code}.",
@@ -90,6 +98,7 @@ const FORMAT = new Map([
   ['welcome', WELCOME],
   ['stop', STOP],
   ['none', NONE],
+  ['more', MORE],
   ['code', CODE],
   ['name', NAME],
   ['status_no', STATUS_NO],
