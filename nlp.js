@@ -24,7 +24,7 @@ const T = {
   VALUE: 0x81,
   BOOLEAN: 0x82,
 };
-const DECIMAL = new Set(['dot', 'point', 'decimal']);
+const DECIMAL = new Set(['.', 'dot', 'point', 'decimal']);
 const SPECIAL = new Map([
   ['infinity', Infinity],
   ['infinite', Infinity],
@@ -202,10 +202,11 @@ function number(tkns) {
   var s = {arr: [], end: false, ord: false, exp: 1};
   for(var tkn of tkns) {
     var txt = tkn.type===T.TEXT? tkn.value.toLowerCase().replace(/[\s,]/g, ''):null;
-    if(txt!=null && (p=process(s, txt)) && !s.end) continue;
-    if(DECIMAL.has(txt)) { pre = get(s); dec = true; p = true; }
-    else if(dec || has(s)) { z.push(decimal(s, dec, pre)); dec = false; pre = NaN; }
-    if(SPECIAL.has(txt)) { z.push({type: T.CARDINAL, value: SPECIAL.get(txt)}); p = true; }
+    if(txt==null) { z.push(tkn); continue; }
+    if(SPECIAL.has(txt)) { if(has(s)) z.push(get(s)); z.push({type: T.CARDINAL, value: SPECIAL.get(txt)}); p = true; }
+    if(DECIMAL.has(txt)) { pre = get(s); dec = true; p = true; continue; }
+    if((p=process(s, txt)) && !s.end) continue;
+    if(dec || has(s)) { z.push(decimal(s, dec, pre)); dec = false; pre = NaN; }
     if(!p) z.push(tkn);
   }
   return z;
@@ -233,6 +234,7 @@ function nlp(txt) {
   tkns = number(tkns);
   for(var tkn of tkns)
     z += tkn.value+' ';
+  console.log(z);
   return z.trim();
 };
 module.exports = nlp;
