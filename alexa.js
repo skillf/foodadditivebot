@@ -11,7 +11,7 @@ function launch(txt) {
 };
 function stop(txt) {
   LAUNCHED.delete(this.event.session.sessionId);
-  this.emit(':tell', txt);
+  this.emit(txt? ':tell':':ask', txt||'');
 };
 function tell(txt) {
   var e = LAUNCHED.has(this.event.session.sessionId)? ':ask':':tell';
@@ -53,7 +53,7 @@ function StopIntent() {
 
 function SessionEndedRequest() {
   console.log(`ALEXA.SessionEndedRequest`);
-  stop.call(this, message('stop'));
+  stop.call(this, null);
 };
 
 function Unhandled() {
