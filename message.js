@@ -8,7 +8,7 @@ You can ask me about the "name", "code", "type", or "approval" of any such addit
 - Give me the type of E 100.
 - I want to know about approval of INS 203.
 
-Say "done / got it" when you are done talking to me.`,
+Say "done, or got it" when you are done talking to me.`,
 ];
 const WELCOME = [
   'Hi! You can ask me about the "name", "code", "type", or "approval" of any food additive. Say "help", to know more, or "done / got it" when you are done talking to me.',
