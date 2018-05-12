@@ -20,3 +20,6 @@ footer {
 #install_success > * {
   background-color: lightgreen;
 }
+::placeholder {
+  color: lightgreen;
+}

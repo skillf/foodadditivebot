@@ -235,7 +235,6 @@ function nlp(txt) {
   tkns = number(tkns);
   for(var tkn of tkns)
     z += tkn.value+' ';
-  console.log(z);
   return z.trim();
 };
 module.exports = nlp;

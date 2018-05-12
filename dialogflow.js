@@ -18,7 +18,7 @@ function DefaultWelcomeIntent(req) {
 };
 
 function AboutHelp(req) {
-  return tell(message('help'));
+  return tell(message('help'), req);
 };
 
 function ActionsStop(req) {

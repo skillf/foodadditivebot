@@ -1,12 +1,12 @@
 const HELP = [
-`Food additives are used to preserve flavor, or enhance taste and appearance. Look at ingredients on the packaging and you can find things like "E202", or "100(ii)" mentioned. These are called the E number, or I.N.S. code of the additive.
+`Food additives preserve flavor, or enhance taste and appearance of packed food. On the packet, they are listed in ingredients box like "E202", "100(ii)", etc. These are called the E number, or I.N.S. code of the additive.
 
 You can ask me about the "name", "code", "type", or "approval" of any such additive. You can ask like:
-- What is INS 203?
-- What is the E number of Potassium Sorbate?
-- Tell me the name of INS 160.3.
-- Give me the type of E 100.
-- I want to know about approval of INS 203.
+- What is I.N.S. 203?
+- What is the e number of potassium sorbate?
+- Tell me the name of I.N.S. one hundred sixty a point three.
+- Give me the type of E one hundred.
+- I want to know about approval status of I.N.S. 203.
 
 Say "done, or got it" when you are done talking to me.`,
 ];
