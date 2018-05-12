@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A cool thing made with Glitch">
+  <script src="https://cdn.jsdelivr.net/gh/dialogflow/dialogflow-javascript-client@2.0.0-beta.21/target/ApiAi.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/barecss/css/bare.min.css">
   <link id="favicon" rel="icon" href="https://i.imgur.com/l4IkEXA.png">
@@ -25,6 +26,7 @@
       <a>Integrations</a>
       <menu>
       <menuitem><a href="https://www.amazon.com/Merferry-Food-Additive/dp/B07C5YH29Q/ref=sr_1_1?s=digital-skills&ie=UTF8&qid=1525076655&sr=1-1&keywords=food+additive">Alexa</a></menuitem>
+      <menuitem><a href="https://www.amazon.in/Merferry-Food-Additive/dp/B07C5YH29Q/ref=sr_1_1?s=digital-skills&ie=UTF8&qid=1525076655&sr=1-1&keywords=food+additive">Alexa (IN)</a></menuitem>
       <menuitem><a href="https://assistant.google.com/services/a/uid/000000410534806d?hl=en-GB">Google</a></menuitem>
       <menuitem><a href="https://merferry.slack.com/apps/AA6BDEZ6F-food-additive?page=1">Slack</a></menuitem>
       </menu>
@@ -38,43 +40,51 @@
   Food Additive successfully installed.
 </blockquote>
 </section>
-<section is="primary">
+
+<section main>
 <br><br>
-<h4>Ask me about additived in packed foods such as Potassium sorbate, INS 203 or E100.</h4>
+<h3>Ask me about additives in packed foods such as E203, or 160a(ii).</h3>
 <br><br>
 <form>
-  <input type="text" placeholder="ex: What is INS 203?" style="text-align: center; font-size: 4rem; font-family: Gugi;">
-
+  <input id="query" type="text" placeholder="ex: What is INS 203?">
 </form>
+<card style="display: none;">
+  <h5 id="ans-head"></h5><hr><p id="ans-body"></p>
+</card>
 </section>
 
-<section>
+<section main>
 <p><big>
   Food additives preserve flavor, or enhance taste and appearance of packed food. On the packet, they are listed in ingredients box like
-  <b>E202</b>, <b>100(ii)</b>, etc. These are called the <b>E number</b>, or <b>I.N.S. code</b> of the additive.
+  <i>E202</i>, <i>100(ii)</i>, etc. These are called the <b>E number</b>, or <b>I.N.S. code</b> of the additive.
   You can ask me about the <b>name</b>, <b>code</b>, <b>type</b>, or <b>approval</b> of any such additive. You can ask like:
 </big></p>
 <blockquote>
 - What is <i>INS 203</i>?<br>
-- What is the <b>e number</b> of <i>potassium sorbate</i>?<br>
+- What is the <b>code</b> of <i>potassium sorbate</i>?<br>
 - Tell me the <b>name</b> of <i>INS one hundred sixty point three</i>.<br>
 - Give me the <b>type</b> of <i>E one hundred</i>.<br>
-- I want to know about <b>approval status</b> of <i>INS 203</i>.
+- I want to know about <b>approval</b> of <i>INS 203</i>.
 </blockquote>
 <p><big>
-  Say "done, or got it" when you are done talking to me.
+  Say <b>done</b>, or <b>got it</b> when you are done talking to me.
 </big></p>
 </section>
 
-<section>
-  <h4>Web Chat</h4>
-  <iframe width="100%" height="400px" src="https://webchat.botframework.com/embed/foodadditivebot?s=nSdT2yeGP7k.cwA.bvA.1WHAG-2cWRfrI-vjTdhYAn7sF4uhuCMBa6h4_VefpiU"></iframe>
-</section>
-
 <footer>
-  <a href="https://slack.com/oauth/authorize?client_id=296327924070.346387509219&scope=bot">
-    <img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" />
-  </a><br>
+  <a href="https://www.amazon.com/Merferry-Food-Additive/dp/B07C5YH29Q/ref=sr_1_1?s=digital-skills&ie=UTF8&qid=1525076655&sr=1-1&keywords=food+additive">
+    <img alt="Works with Alexa" width="100" src="https://i.imgur.com/8Td8kLK.png"/>
+  </a>&nbsp;&nbsp;
+  <a href="https://www.amazon.in/Merferry-Food-Additive/dp/B07C5YH29Q/ref=sr_1_1?s=digital-skills&ie=UTF8&qid=1525076655&sr=1-1&keywords=food+additive">
+    <img alt="Works with Alexa IN" width="100" src="https://i.imgur.com/2M0wFBR.png"/>
+  </a>&nbsp;&nbsp;
+  <a href="https://assistant.google.com/services/a/uid/000000410534806d?hl=en-GB">
+    <img alt="Works with Google Assistant" width="100" src="https://i.imgur.com/dpNUfXh.png"/>
+  </a>&nbsp;&nbsp;
+  <a href="https://merferry.slack.com/apps/AA6BDEZ6F-food-additive?page=1">
+    <img alt="Add to Slack" width="100" src="https://i.imgur.com/Pp26OTJ.png"/>
+  </a>
+  <br><br>
   <a href="https://docs.google.com/document/d/1AcES7HLBdvsqnThumDWOQCTLUHO8ABp8_pjJ9Vjdn2o/edit?usp=sharing">Privacy Policy</a>
   <a href="https://docs.google.com/document/d/1WLZzMFOWtzEO_Vf-xjha0_OfbMNic5IJVL6Luh-UApo/edit?usp=sharing">(Google)</a>&nbsp;&nbsp;
   <a href="https://docs.google.com/document/d/1E7nTA4ngAWru_MGYMn8NR1xcJ5YHjMM6UnH9_VtTULo/edit?usp=sharing">Terms of Service</a>&nbsp;&nbsp;

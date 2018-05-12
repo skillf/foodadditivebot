@@ -1,16 +1,28 @@
 body {
-  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/food.png");
+  /*background: url("https://www.toptal.com/designers/subtlepatterns/patterns/food.png");*/
+  background: fixed left center url("https://i.imgur.com/jlPrCAy.jpg");
   font-family: 'Gugi', cursive;
 }
 pre {
   display: inline;
 }
 footer::before {
+  background: rgba(0,0,0,0.7);
   width: 98vw;
 }
 footer {
   text-align: center;
   padding: 6rem 0;
+}
+section[main], #query:focus, #query {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: white;
+}
+card {
+  background: rgba(0,0,0,0.5);
+}
+h3 {
+  text-align: center;
 }
 .low p {
   padding-bottom: 0;
@@ -21,5 +33,14 @@ footer {
   background-color: lightgreen;
 }
 ::placeholder {
-  color: lightgreen;
+  color: silver;
+}
+#query {
+  font-family: Gugi;
+  font-size: 2.4rem;
+  text-align: center;
+  border-bottom: 2px solid silver;
+}
+button:not([class]) {
+  border: none;
 }
