@@ -1,6 +1,5 @@
 const HELP = [
-`Food additives preserve flavor, or enhance taste and appearance of packed food. On the packet, they are listed in ingredients box like "E202", "100(ii)", etc.
-These are called the "E number", or "I.N.S. code" of the additive. You can ask me about the "name", "code", "type", or "approval" of any such additive. You can ask like:
+`Food additives preserve flavor, or enhance taste and appearance of packed food. On the packet, they are listed in ingredients box like "E202", "100(ii)", etc. These are called the "E number", or "I.N.S. code" of the additive. You can ask me about the "name", "code", "type", or "approval" of any such additive. You can ask like:
 - What is I.N.S. 203?
 - Tell me the name of I.N.S. one hundred sixty point three.
 - What is the code of potassium sorbate?
