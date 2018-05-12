@@ -1,20 +1,19 @@
 const HELP = [
-`Food additives preserve flavor, or enhance taste and appearance of packed food. On the packet, they are listed in ingredients box like "E202", "100(ii)", etc. These are called the E number, or I.N.S. code of the additive.
-
-You can ask me about the "name", "code", "type", or "approval" of any such additive. You can ask like:
+`Food additives preserve flavor, or enhance taste and appearance of packed food. On the packet, they are listed in ingredients box like "E202", "100(ii)", etc.
+These are called the "E number", or "I.N.S. code" of the additive. You can ask me about the "name", "code", "type", or "approval" of any such additive. You can ask like:
 - What is I.N.S. 203?
 - What is the e number of potassium sorbate?
 - Tell me the name of I.N.S. one hundred sixty a point three.
 - Give me the type of E one hundred.
 - I want to know about approval status of I.N.S. 203.
 
-Say "done, or got it" when you are done talking to me.`,
+Say "done", or "got it" when you are done talking to me.`,
 ];
 const WELCOME = [
-  'Hi! You can ask me about the "name", "code", "type", or "approval" of any food additive. Say "help", to know more, or "done / got it" when you are done talking to me.',
-  'Hello! You can ask me about the "name", "code", "type", or "approval" of any food additive. Say "help", to know more, or "done / got it" when you are done talking to me.',
-  'Good day! You can ask me about the "name", "code", "type", or "approval" of any food additive. Say "help", to know more, or "done / got it" when you are done talking to me.',
-  'Greetings! You can ask me about the "name", "code", "type", or "approval" of any food additive. Say "help", to know more, or "done / got it" when you are done talking to me.',
+  'Hi! You can ask me about the "name", "code", "type", or "approval" of any food additive. Say "help", to know more, or "done" when you are done talking to me.',
+  'Hello! You can ask me about the "name", "code", "type", or "approval" of any food additive. Say "help", to know more, or "done" when you are done talking to me.',
+  'Good day! You can ask me about the "name", "code", "type", or "approval" of any food additive. Say "help", to know more, or "done" when you are done talking to me.',
+  'Greetings! You can ask me about the "name", "code", "type", or "approval" of any food additive. Say "help", to know more, or "done" when you are done talking to me.',
 ];
 const STOP = [
   'Goodbye!',
