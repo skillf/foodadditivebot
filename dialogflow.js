@@ -14,25 +14,25 @@ function tell(out, req) {
 
 function DefaultWelcomeIntent(req) {
   LAUNCHED.add(req.sessionId);
-  return message('welcome');
+  return tellAs(message('welcome'), true);
 };
 
 function AboutHelp(req) {
-  return message('help');
+  return tell(message('help'));
 };
 
 function ActionsStop(req) {
   LAUNCHED.delete(req.sessionId);
-  return message('stop');
+  return tellAs(message('stop'), false);
 };
 
 function dialogflow(req, res) {
   var rst  = req.body.result, inp = rst.resolvedQuery;
   var int = rst.metadata.intentName, ps = rst.parameters;
   console.log(`DIALOGFLOW.${int}>> "${inp}"`, ps);
-  if(int==='Default Welcome Intent') return res.json(tellAs(DefaultWelcomeIntent(req.body), true));
-  if(int==='about_help') return res.json(tell(AboutHelp(req.body)));
-  if(int==='action_stop') return res.json(tellAs(ActionsStop(req.body), false));
+  if(int==='Default Welcome Intent') return res.json(DefaultWelcomeIntent(req.body));
+  if(int==='about_help') return res.json(AboutHelp(req.body));
+  if(int==='action_stop') return res.json(ActionsStop(req.body));
   var out = query(ps.key||'', ps.tags||[]);
   res.json(tell(out, req.body));
   console.log(`DIALOGFLOW.${int}<< "${out}"`);
